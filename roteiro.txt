@@ -20,7 +20,7 @@ Atividades
 
 Etapa 1 – Criação de DataBase e Collection no MongoDB e importação dos dados originais
 
-(  ) 1. Pré-requisitos – O aluno já deve ter instalado em seu computador o 
+( x ) 1. Pré-requisitos – O aluno já deve ter instalado em seu computador o 
 Node.js (recomenda-se a versão 12.9.1 ou superior) e o 
 Yarn (recomenda-se a versão 1.22.4 ou superior, desde que se mantenha a versão 1.x). 
 Além disso, o aluno já deve possuir sua conta devidamente criada no serviço MongoDB Atlas e 
@@ -28,8 +28,7 @@ já ter criado o seu Cluster gratuito. Para não ter problemas com conexões,
 configure o cluster para aceitar conexões de 0.0.0.0. 
 Isso pode ser feito através da tela "Network Access".
 
-
-(  ) 2. Acesse o Cluster já criado no MongoDB Atlas. Em seguida, acesse a tela de Collections e 
+( x ) 2. Acesse o Cluster já criado no MongoDB Atlas. Em seguida, acesse a tela de Collections e 
 crie um novo DataBase, conforme imagem abaixo. Sugere-se que o aluno utilize os mesmos nomes 
 que utilizei, pois eles serão utilizados durante todo este tutorial. 
 Nomes diferentes podem confundir o aluno durante o desenvolvimento do desafio, 
@@ -40,7 +39,7 @@ DataBase Name – DesafioFinalBootcampFullStack
 Collection Name – transactions
 *****************************************************
 
-(  ) 3. Certifique-se de que tanto o DataBase quanto a Collection foram devidamente criados.
+( x ) 3. Certifique-se de que tanto o DataBase quanto a Collection foram devidamente criados.
 
 (  ) 4. Acesse a aplicação Node.js fornecida pelo professor no "Fórum de Avisos" do Módulo 
 (projeto "mongodb-import") e execute o comando yarn para instalar todas as dependências 
@@ -48,19 +47,19 @@ já definidas em package.json. Crie o arquivo ".env" na raiz do projeto e preenc
 "DB_CONNECTION" com os dados pertinentes ao seu Banco de Dados. 
 As dicas de como preencher o arquivo ".env" estão no arquivo ".env.example". 
 Há um comentário iniciado por # na linha 1 com um exemplo de preenchimento e um 
-template para ser copiado/colado no arquivo ".env". Muito cuidado com o preenchimento dos valores. 
-Caracteres maiúsculos e minúsculos são considerados!
+template para ser copiado/colado no arquivo ".env". Muito cuidado com o preenchimento 
+dos valores. Caracteres maiúsculos e minúsculos são considerados!
 
 
-(  ) 5. Acesse a pasta do projeto "mongodb-import" no seu terminal de comandos e execute 
+( x ) 5. Acesse a pasta do projeto "mongodb-import" no seu terminal de comandos e execute 
 o seguinte comando: "yarn db". Caso ocorra algum problema, verifique novamente os passos acima. 
 Se tudo correr bem, a seguinte saída aparecerá no terminal e os dados originais do projeto 
 serão copiados para o seu Banco de Dados.
 
-(  ) 6. Confirme se os dados apareceram em sua conta no MongoDB Atlas. 
+( x ) 6. Confirme se os dados apareceram em sua conta no MongoDB Atlas. 
 Recarregue a tela, se necessário.
 
-(  ) 7. Observação muito importante: a execução deste script de importação 
+( x ) 7. Observação muito importante: a execução deste script de importação 
 deve ser feita novamente antes do aluno preencher o Questionário sobre o Desafio Final, 
 pois serão considerados os dados originais. Não modifique os arquivos do projeto "mongodb-import", 
 principalmente os de extensão .json, senão isso pode te prejudicar na resolução das questões. 
@@ -69,21 +68,21 @@ Caso esse arquivo seja modificado, você pode obter novamente o projeto no "Fór
 ou então acessar a pasta "./backup". Há uma cópia desse arquivo por lá.
 
 
-(  ) 8. Os registros importados foram gerados aleatoriamente através de combinações de descrições, 
+( x ) 8. Os registros importados foram gerados aleatoriamente através de combinações de descrições, 
 categorias e valores. Além disso, ficou definido o período como: todos os meses do ano anterior, 
 ano atual e ano posterior, totalizando ao todo 36 períodos (atualmente: de jan/2019 até dez/2021, 
 inclusive). Devo disponibilizar o código-fonte deste script para vocês no fórum durante o andamento 
 do Módulo.
 
 
-(  ) 9. Observação importante: na geração do arquivo original, houve uma pequena falha e alguns 
+( x ) 9. Observação importante: na geração do arquivo original, houve uma pequena falha e alguns 
 registros com a descrição “Receita xyz...” foram criados como despesa. Vocês devem considerar 
 que as receitas são os registros com type === '+' e as despesas são os registros com o type === '-'. 
 Desconsiderem a descrição. Na aula interativa demonstrarei o bug. 
 Preferi manter o arquivo original mesmo assim para evitar algum tipo de conflito no Desafio Final.
 
 
-(  ) 10. Fim da etapa 1!
+( x ) 10. Fim da etapa 1!
 
 ***************************************************************************************************
 
