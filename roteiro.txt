@@ -41,7 +41,7 @@ Collection Name – transactions
 
 ( x ) 3. Certifique-se de que tanto o DataBase quanto a Collection foram devidamente criados.
 
-(  ) 4. Acesse a aplicação Node.js fornecida pelo professor no "Fórum de Avisos" do Módulo 
+( x ) 4. Acesse a aplicação Node.js fornecida pelo professor no "Fórum de Avisos" do Módulo 
 (projeto "mongodb-import") e execute o comando yarn para instalar todas as dependências 
 já definidas em package.json. Crie o arquivo ".env" na raiz do projeto e preencha 
 "DB_CONNECTION" com os dados pertinentes ao seu Banco de Dados. 
@@ -89,16 +89,16 @@ Preferi manter o arquivo original mesmo assim para evitar algum tipo de conflito
 Etapa 2 – Implementação do Back End
 
 
-(  ) 1. Recomendo utilizar como base o projeto app-vazio que será disponibilizado no Fórum de Avisos. 
+( x ) 1. Recomendo utilizar como base o projeto app-vazio que será disponibilizado no Fórum de Avisos. 
 Nos itens a seguir, falarei mais sobre esse projeto.
 
-(  ) 2. Acesse a pasta app-vazio após a extração em alguma pasta no seu computador. 
+( x ) 2. Acesse a pasta app-vazio após a extração em alguma pasta no seu computador. 
 Renomeie a pasta para app.
 
-(  ) 3. Acesse a pasta app através de um terminal de comandos e digite o 
+( x ) 3. Acesse a pasta app através de um terminal de comandos e digite o 
 comando yarn para instalar as dependências.
 
-(  ) 4. Verifique, estude e entenda as pastas e arquivos já contidos neste projeto:
+( x ) 4. Verifique, estude e entenda as pastas e arquivos já contidos neste projeto:
 
 
  Pasta client: contém o projeto React (Front End). É o mesmo "react-projeto-base", 
@@ -128,36 +128,36 @@ esteja devidamente preenchida no arquivo .env.
 
 (  ) 5. Verifique, estude e entenda mais alguns detalhes importantes sobre o arquivo index.js:
 
-Este trecho de código faz com que o express hospede o React de produção (após o build).
+     ( x ) Este trecho de código faz com que o express hospede o React de produção (após o build).
 
-Este trecho de código faz com que a API principal do Back End (transaction) fique hospedada em 
-http://"meu_site_no_heroku".herokuapp.com/api/transaction
+     (  ) Este trecho de código faz com que a API principal do Back End (transaction) fique hospedada em 
+     http://"meu_site_no_heroku".herokuapp.com/api/transaction
 
-Neste trecho de código, perceba que foi priorizado o valor de process.env.PORT 
-para ser utilizado como porta do servidor de Back End. Isso será utilizado pelo Heroku em produção. 
-Em desenvolvimento, será adotada a porta 3001, pois não há a variável PORT no arquivo .env local.
+     ( x ) Neste trecho de código, perceba que foi priorizado o valor de process.env.PORT 
+     para ser utilizado como porta do servidor de Back End. Isso será utilizado pelo Heroku em produção. 
+     Em desenvolvimento, será adotada a porta 3001, pois não há a variável PORT no arquivo .env local.
 
 (  ) 6. Verifique, estude e entenda alguns detalhes importantes sobre o arquivo package.json:
 
-Para executar o servidor local, digite yarn server, que irá utilizar o Nodemon para tal.
+     ( x ) Para executar o servidor local, digite yarn server, que irá utilizar o Nodemon para tal.
 
-O script heroku-postbuild será utilizado pelo Heroku CLI para realizar o build da aplicação React.
+     (  ) O script heroku-postbuild será utilizado pelo Heroku CLI para realizar o build da aplicação React.
 
-Mais detalhes serão vistos na documentação da Etapa 4.
+     (  ) Mais detalhes serão vistos na documentação da Etapa 4.
 
-Configuração importante do Nodemon para que ele não "escute" a pasta do React, 
-pois ela já tem um servidor próprio de desenvolvimento. Sem isso, 
-qualquer alteração no projeto React acarreta no reinício do servidor de Back End durante 
-o desenvolvimento, o que não é desejável.
+     (  ) Configuração importante do Nodemon para que ele não "escute" a pasta do React, 
+     pois ela já tem um servidor próprio de desenvolvimento. Sem isso, 
+     qualquer alteração no projeto React acarreta no reinício do servidor de Back End durante 
+     o desenvolvimento, o que não é desejável.
 
-Configuração importante do Heroku para que ele utilize a mesma versão do Node.js de 
-desenvolvimento em produção. Se a sua versão do Node.js for diferente de 12.9.1, 
-faça a devida alteração nesse objeto de package.json e informe a versão que você está utilizando. 
-Recomenda-se, entretanto, utilizar a versão 12.9.1. Ela foi homologada por mim durante 
-o desenvolvimento deste projeto.
+     ( x ) Configuração importante do Heroku para que ele utilize a mesma versão do Node.js de 
+     desenvolvimento em produção. Se a sua versão do Node.js for diferente de 12.9.1, 
+     faça a devida alteração nesse objeto de package.json e informe a versão que você está utilizando. 
+     Recomenda-se, entretanto, utilizar a versão 12.9.1. Ela foi homologada por mim durante 
+     o desenvolvimento deste projeto.
 
 
-(  ) 7. Ainda na pasta raiz do projeto, execute yarn server para inicializar o Back End 
+( x ) 7. Ainda na pasta raiz do projeto, execute yarn server para inicializar o Back End 
 de desenvolvimento. Caso ocorra algum problema, verifique novamente os passos acima. 
 Se tudo correr bem, serão exibidas as seguintes mensagens no console:
 
@@ -165,17 +165,16 @@ Se tudo correr bem, serão exibidas as seguintes mensagens no console:
 o período (ano-mês), com base no campo yearMonth. Ou seja, o período deve ser obrigatoriamente 
 informado nesse tipo de rota. Isso deve ser implementado pelo aluno no arquivo routes.js.
 
-Requisição incorreta, pois não foi informado o parâmetro period.
+     Requisição incorreta, pois não foi informado o parâmetro period.
+     Requisição correta, pois foi informado o parâmetro period.
 
-Requisição correta, pois foi informado o parâmetro period.
-
-9. Agora é com você, aluno(a)! Faça as implementações pendentes em routes.js 
+(  ) 9. Agora é com você, aluno(a)! Faça as implementações pendentes em routes.js 
 e transactionService.js com base no conteúdo visto nos Módulos 02 e 04 do Bootcamp. 
 Sugiro também testar as rotas com o Insomnia e verificar se todo o CRUD está sendo de 
 fato refletido no MongoDB. Fique à vontade para implementar o código da maneira que preferir. 
 Observação importante: considere que todos os campos de "transaction" são obrigatórios!
 
-10. Fim da Etapa 2!
+(  ) 10. Fim da Etapa 2!
 *************************************************************************************
 
 Etapa 3 – Implementação do Front End com React
