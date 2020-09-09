@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const routes = require('./routes/routes');
 const path = require('path');
 const dotenv = require('dotenv');
-
+const winston = require('winston');
 /**
  * Faz a leitura do arquivo
  * ".env" por padrão
@@ -69,4 +69,19 @@ connection.once('open', () => {
   app.listen(APP_PORT, () => {
     console.log(`Servidor iniciado na porta ${APP_PORT}`);
   });
+});
+
+
+const { combine, timestamp, label, printf } = winston.format;
+const myFormat = printf(({ level, message, label, timestamp }) => {
+  return `${timestamp} [${label}] ${level}: ${message}`;
+});
+//global.fileName = './grades.json';
+global.logger = winston.createLogger({
+  level: 'silly',
+  transports: [
+    new winston.transports.Console(),
+    new winston.transports.File({ filename: 'desafioFinal.log' }),
+  ],
+  format: combine(label({ label: 'Desafio-FINAL' }), timestamp(), myFormat),
 });
