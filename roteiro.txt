@@ -180,20 +180,20 @@ Observação importante: considere que todos os campos de "transaction" são obr
 Etapa 3 – Implementação do Front End com React
 
 
-(  ) 1. O Front End deve ser implementado a partir da pasta "client". 
+( x ) 1. O Front End deve ser implementado a partir da pasta "client". 
 Lá se encontram os mesmos arquivos do "_react-projeto-base", que disponibilizei durante o Módulo 03.
 
-(  ) 2. Fica a critério do aluno a definição da interface. 
+( x ) 2. Fica a critério do aluno a definição da interface. 
 As telas a seguir são somente uma sugestão de interface que foi implementada pelo professor.
 
-(  ) 3. Acesse a pasta client e digite yarn para instalar as dependências do projeto que são, 
+( x ) 3. Acesse a pasta client e digite yarn para instalar as dependências do projeto que são, 
 além dos pacotes relacionados ao create-react-app:
 
-      (  ) a. Pacote materialize-css
+      ( x ) a. Pacote materialize-css
       (  ) b. Pacote axios
       (  ) c. Pacote react-modal
 
-(  )  4. O arquivo package.json também foi modificado pelo professor, conforme imagem abaixo. 
+( x )  4. O arquivo package.json também foi modificado pelo professor, conforme imagem abaixo. 
 Isso é importante para os casos onde tanto o Back End quanto o Front End estão hospedados 
 no mesmo servidor, que é o caso deste projeto. Mais informações podem ser encontradas aqui.
 

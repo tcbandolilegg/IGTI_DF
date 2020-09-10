@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-
 import TransactionModel from './TransactionModel.js';
 
 const db = {};
