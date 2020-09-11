@@ -1,7 +1,6 @@
 import React from 'react';
+import Dashboard from './components/Dashboard';
 
 export default function App() {
-  return
-  <h1> Desafio Final do Bootcamp Full Stack</h1 >;
-  <h2>Controle Financeiro Pessoal</h2>
+  return <Dashboard />;
 }
