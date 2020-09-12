@@ -37,7 +37,8 @@ export default function Dashboard() {
       let transactions = filteredTransactions.data;
       console.log(transactions);
 
-      transactions = transactions.sort((a, b) => a.day - b.day);
+      // transactions = transactions.sort((a, b) => a.day - b.day);
+      transactions = transactions.transactions.sort((a, b) => a.day - b.day);
 
       setTransactions(transactions);
       setFilteredTransactions(transactions);
