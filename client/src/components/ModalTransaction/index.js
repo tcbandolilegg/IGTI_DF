@@ -85,6 +85,7 @@ export default function ModalTransaction({
   async function handleSubmit(event) {
     event.preventDefault();
     const [year, month, day] = date.split('-');
+    console.log("DATAS.......", year, month, day);
     const yearMonth = `${year}-${month}`;
 
     const transaction = {
