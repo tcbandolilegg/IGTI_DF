@@ -35,10 +35,8 @@ export default function Dashboard() {
       const filteredTransactions = await TransactionService.get(yearMonth);
       console.log(filteredTransactions);
       let transactions = filteredTransactions.data;
-      console.log(transactions.transactions);
-      //ATENÇÃO NOS ARRAYS
-      // transactions = transactions.sort((a, b) => a.day - b.day);
-      transactions = transactions.transactions.sort((a, b) => a.day - b.day);
+
+      transactions = transactions.sort((a, b) => a.day - b.day);
 
       setTransactions(transactions);
       setFilteredTransactions(transactions);
@@ -88,9 +86,8 @@ export default function Dashboard() {
   return (
     <div className="container">
       <header>
-        <h1 color="red">IGTI - Bootcamp Full Stack </h1>
-        <h3>Desafio Final</h3>
-        <h5>Controle Financeiro Pessoal</h5>
+        <h1>Bootcamp Full Stack - Desafio Final</h1>
+        <h3>Controle Financeiro Pessoal</h3>
       </header>
       {/* FILTRO */}
       {/* options vai ser de acordo com o que tem no banco de dados */}
@@ -104,10 +101,9 @@ export default function Dashboard() {
             onChange={handleChangeSelect}
             className="browser-default"
           >
-            console.log("AQUI PERIODOS",periods);
             {periods.map((period, key) => {
-            return <option key={key}>{period}</option>;
-          })}
+              return <option key={key}>{period}</option>;
+            })}
           </select>
         </label>
         <div>
@@ -145,7 +141,7 @@ export default function Dashboard() {
 
       <div className="addSearchTransaction">
         <button onClick={handleClickNewTransaction}>
-          <span></span>Inclusão de Lançamentos
+          <span>+</span> Novo Lançamento
         </button>
         {modalNewTransactionIsOpen && (
           <ModalTransaction
@@ -156,7 +152,6 @@ export default function Dashboard() {
 
         <input
           type="text"
-          margin-left="50px"
           name="filtroNomeTransacao"
           id="filtroNomeTransacao"
           placeholder="Filtro"

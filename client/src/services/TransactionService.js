@@ -1,4 +1,4 @@
-import http from '../http-common.js';
+import http from '../http-common';
 
 const getAll = async () => {
   return await http.get('/transaction');

@@ -22,7 +22,7 @@ export default function ModalTransaction({
   useEffect(() => {
     openModal();
     if (objTransaction) {
-      //console.log(objTransaction._id);
+      console.log(objTransaction._id);
       let {
         type,
         category,
@@ -85,7 +85,6 @@ export default function ModalTransaction({
   async function handleSubmit(event) {
     event.preventDefault();
     const [year, month, day] = date.split('-');
-    console.log("DATAS.......", year, month, day);
     const yearMonth = `${year}-${month}`;
 
     const transaction = {
@@ -105,7 +104,7 @@ export default function ModalTransaction({
         alert('Transação inserida com sucesso!');
       else alert('Erro ao tentar adicionar transação!');
     } else {
-      //console.log('aqui', objTransaction._id);
+      console.log('aquiiii', objTransaction._id);
       const updatedTransaction = await TransactionService.update(
         objTransaction._id,
         transaction

@@ -8,10 +8,6 @@ let schema = mongoose.Schema({
   value: {
     type: Number,
     required: true,
-    //Valida se o lançamento inserida é menor que zero
-    validate(value) {
-      if (value < 0) throw new Error('Valor negativo para o lançamento');
-    },
   },
   category: {
     type: String,
@@ -20,26 +16,14 @@ let schema = mongoose.Schema({
   year: {
     type: Number,
     required: true,
-    //Valida se o ano inserida e' menor que zero
-    validate(year) {
-      if (year < 0) throw new Error('Valor negativo para ano');
-    },
   },
   month: {
     type: Number,
     required: true,
-    //Valida se o mes inserida e' menor que zero
-    validate(month) {
-      if (month < 0) throw new Error('Valor negativo para mes');
-    },
   },
   day: {
     type: Number,
     required: true,
-    //Valida se o dia inserida e' menor que zero
-    validate(day) {
-      if (day < 0) throw new Error('Valor negativo para dia');
-    },
   },
   yearMonth: {
     type: String,
@@ -55,10 +39,6 @@ let schema = mongoose.Schema({
   },
 });
 
-// lastModified: {
-//   type: Date,
-//   default: Date.now,
-// },
-const TransactionModel = mongoose.model('transactions', schema, 'transactions');
+const TransactionModel = mongoose.model('transaction', schema);
 
 module.exports = TransactionModel;
