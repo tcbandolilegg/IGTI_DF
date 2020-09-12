@@ -150,7 +150,7 @@ export default function Dashboard() {
             typeOperation={'Inclusão'}
           />
         )}
-
+        <span>   </span>
         <input
           type="text"
           name="filtroNomeTransacao"
