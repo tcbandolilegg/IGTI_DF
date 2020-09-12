@@ -104,9 +104,10 @@ export default function Dashboard() {
             onChange={handleChangeSelect}
             className="browser-default"
           >
+            console.log("AQUI PERIODOS",periods);
             {periods.map((period, key) => {
-              return <option key={key}>{period}</option>;
-            })}
+            return <option key={key}>{period}</option>;
+          })}
           </select>
         </label>
         <div>
