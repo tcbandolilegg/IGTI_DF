@@ -86,8 +86,9 @@ export default function Dashboard() {
   return (
     <div className="container">
       <header>
-        <h1>Bootcamp Full Stack - Desafio Final</h1>
-        <h3>Controle Financeiro Pessoal</h3>
+        <h1 color="red">IGTI - Bootcamp Full Stack </h1>
+        <h3>Desafio Final</h3>
+        <h5>Controle Financeiro Pessoal</h5>
       </header>
       {/* FILTRO */}
       {/* options vai ser de acordo com o que tem no banco de dados */}
@@ -141,7 +142,7 @@ export default function Dashboard() {
 
       <div className="addSearchTransaction">
         <button onClick={handleClickNewTransaction}>
-          <span>+</span> Novo Lançamento
+          <span></span>Inclusão de Lançamentos
         </button>
         {modalNewTransactionIsOpen && (
           <ModalTransaction
