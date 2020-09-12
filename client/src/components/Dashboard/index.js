@@ -119,7 +119,8 @@ export default function Dashboard() {
           {filteredTransactions
             .filter((transaction) => transaction.type === '+')
             .reduce((acc, curr) => acc + curr.value, 0)
-            .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+          }
+          {/* .toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} */}
         </span>
         <span>
           Despesas:

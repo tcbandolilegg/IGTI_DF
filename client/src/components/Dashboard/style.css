@@ -45,6 +45,7 @@ form>div>button {
 
 .transactions {
   margin: 10px auto;
+  color: black;
   border: solid 1px lightgrey;
   width: inherit;
 }
