@@ -6,7 +6,7 @@ const ObjectId = mongoose.Types.ObjectId;
 // o servidor é Linux, isso faz diferença. Gastei umas boas horas tentando
 // descobrir esse erro :-/
 const TransactionModel = require('../models/TransactionModel.js');
-console.log("Entarando em service");
+//console.log("Entarando em service");
 
 
 /// mostra todos sem restrição

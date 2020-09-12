@@ -3,7 +3,7 @@ const TransactionRouter = express.Router();
 
 const services = require("../services/transactionService.js");
 
-console.log("Entarando em routers");
+//console.log("Entarando em routers");
 
 TransactionRouter.get('/', services.findAll);
 TransactionRouter.get('/period/', services.findAllForPeriod);

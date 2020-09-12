@@ -22,7 +22,7 @@ export default function ModalTransaction({
   useEffect(() => {
     openModal();
     if (objTransaction) {
-      console.log(objTransaction._id);
+      //console.log(objTransaction._id);
       let {
         type,
         category,
@@ -104,7 +104,7 @@ export default function ModalTransaction({
         alert('Transação inserida com sucesso!');
       else alert('Erro ao tentar adicionar transação!');
     } else {
-      console.log('aquiiii', objTransaction._id);
+      //console.log('aqui', objTransaction._id);
       const updatedTransaction = await TransactionService.update(
         objTransaction._id,
         transaction

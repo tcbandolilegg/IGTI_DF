@@ -15,7 +15,7 @@ export default function Transaction({ transaction }) {
   async function handleClickDeleteModal() {
     const { _id } = transaction;
     const deletedTransaction = await TransactionService.remove(_id);
-    console.log(deletedTransaction);
+    //console.log(deletedTransaction);
   }
 
   const styles = type === '+' ? 'positive' : 'negative';

@@ -40,7 +40,7 @@ app.use('/api/transaction', routes);
  */
 const { DB_CONNECTION } = process.env;
 
-console.log('Iniciando conexão ao MongoDB...');
+//console.log('Iniciando conexão ao MongoDB...');
 mongoose.connect(
   DB_CONNECTION,
   {
@@ -59,7 +59,7 @@ const { connection } = mongoose;
 
 connection.once('open', () => {
   connectedToMongoDB = true;
-  console.log('Conectado ao MongoDB');
+  //console.log('Conectado ao MongoDB');
 
   /**
    * Definição de porta e
@@ -67,7 +67,7 @@ connection.once('open', () => {
    */
   const APP_PORT = process.env.PORT || 3001;
   app.listen(APP_PORT, () => {
-    console.log(`Servidor iniciado na porta ${APP_PORT}`);
+    //console.log(`Servidor iniciado na porta ${APP_PORT}`);
   });
 });
 
