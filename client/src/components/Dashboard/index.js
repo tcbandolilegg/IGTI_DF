@@ -14,6 +14,7 @@ export default function Dashboard() {
     false
   );
 
+
   //initialState yearMonth
   useEffect(() => {
     const date = new Date();
@@ -151,7 +152,8 @@ export default function Dashboard() {
             typeOperation={'Inclusão'}
           />
         )}
-        <span>   </span>
+        <div><span>...</span></div>
+
         <input
           type="text"
           name="filtroNomeTransacao"

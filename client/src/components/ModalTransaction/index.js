@@ -197,6 +197,7 @@ export default function ModalTransaction({
                 value={value}
                 onChange={handleValueInput}
                 onClick={handleValueInput}
+                required
               />
             </div>
             <div className="dateInput">
