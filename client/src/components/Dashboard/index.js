@@ -35,6 +35,7 @@ export default function Dashboard() {
       const filteredTransactions = await TransactionService.get(yearMonth);
       console.log(filteredTransactions);
       let transactions = filteredTransactions.data;
+      console.log(transactions);
 
       transactions = transactions.sort((a, b) => a.day - b.day);
 
