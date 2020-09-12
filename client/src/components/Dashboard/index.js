@@ -152,7 +152,7 @@ export default function Dashboard() {
             typeOperation={'Inclusão'}
           />
         )}
-        <div><span id="space">...</span></div>
+        <div><p id="space"></p></div>
 
         <input
           type="text"
